@@ -76,7 +76,7 @@ func (b BitcoinCorePlugin) FetchMetrics() (map[string]float64, error) {
 	}
 	log.Printf("%#v", info.LocalAddresses[0].Score)
 	for _, v := range info.LocalAddresses {
-		stat["network.score."+v.Address] = float64(v.Score)
+		stat["network.score."+strings.Replace(v.Address, ".", "_", -1)] = float64(v.Score)
 	}
 	peerInfo, err := client.GetPeerInfo()
 	total := 0
