@@ -6,7 +6,7 @@ mackerel-plugin-bitcoin-core: mackerel-plugin-bitcoin-core.go Makefile
 	go build $(LDFLAGS) -o mackerel-plugin-bitcoin-core
 
 linux: mackerel-plugin-bitcoin-core.go
-	GOOS=linux GOARCH=amd64 go build $(LDFLAGS) -o mackerel-plugin-linux-process-status
+	GOOS=linux GOARCH=amd64 go build $(LDFLAGS) -o mackerel-plugin-bitcoin-core
 
 fmt:
 	go fmt ./...
@@ -15,7 +15,7 @@ check:
 	go test ./...
 
 clean:
-	rm -rf mackerel-plugin-linux-process-status
+	rm -rf mackerel-plugin-bitcoin-core
 
 tag:
 	git tag v${VERSION}
