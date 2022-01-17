@@ -1,8 +1,8 @@
 mackerel-plugin-bitcoin-core
 =======
 
-[![Test Status](https://github.com/dekokun/mackerel-plugin-bitcoin-core/workflows/test/badge.svg?branch=master)][actions]
-[![Coverage Status](https://codecov.io/gh/dekokun/mackerel-plugin-bitcoin-core/branch/master/graph/badge.svg)][codecov]
+[![Test Status](https://github.com/dekokun/mackerel-plugin-bitcoin-core/workflows/test/badge.svg?branch=main)][actions]
+[![Coverage Status](https://codecov.io/gh/dekokun/mackerel-plugin-bitcoin-core/branch/main/graph/badge.svg)][codecov]
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license]
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/dekokun/mackerel-plugin-bitcoin-core)][PkgGoDev]
 
