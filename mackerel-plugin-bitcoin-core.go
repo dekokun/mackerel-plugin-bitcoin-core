@@ -137,7 +137,7 @@ func Run(ctx context.Context, argv []string, outStream, errStream io.Writer) err
 	optPort := fs.String("port", "8332", "port to connect")
 	optUser := fs.String("user", "", "rpc user")
 	optPassword := fs.String("password", "", "rpc password")
-	optPrefix := flag.String("metric-key-prefix", "bitcoin", "Metric key prefix")
+	optPrefix := fs.String("metric-key-prefix", "bitcoin", "Metric key prefix")
 	if err := fs.Parse(argv); err != nil {
 		return err
 	}
