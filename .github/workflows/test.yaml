@@ -6,14 +6,7 @@ on:
   pull_request: {}
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-        - ubuntu-latest
-        - macOS-latest
-        - windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: setup go
       uses: actions/setup-go@v2
