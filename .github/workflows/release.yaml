@@ -4,7 +4,7 @@ on:
     tags:
     - "v[0-9]+.[0-9]+.[0-9]+"
 jobs:
-  goreleaser:
+  release-binary:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,8 +24,8 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  build-and-push-release:
-    needs: [release]
+  build-and-push-docker-image:
+    needs: [release-binary]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
