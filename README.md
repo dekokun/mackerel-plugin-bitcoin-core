@@ -11,12 +11,12 @@ mackerel-plugin-bitcoin-core
 [license]: https://github.com/dekokun/mackerel-plugin-bitcoin-core/blob/master/LICENSE
 [PkgGoDev]: https://pkg.go.dev/github.com/dekokun/mackerel-plugin-bitcoin-core
 
-mackerel-plugin-bitcoin-core short description
+mackerel plugin to monitor bitcoin-core.
 
 ## Synopsis
 
 ```go
-// simple usage here
+$ mackerel-plugin-bitcoin-core -host localhost -port 8332 -user <your bitcoind rpc user> -password <your bitcoind rpc password>
 ```
 
 ## Description
@@ -24,17 +24,11 @@ mackerel-plugin-bitcoin-core short description
 ## Installation
 
 ```console
-# Install the latest version. (Install it into ./bin/ by default).
-% curl -sfL https://raw.githubusercontent.com/dekokun/mackerel-plugin-bitcoin-core/main/install.sh | sh -s
-
-# Specify installation directory ($(go env GOPATH)/bin/) and version.
-% curl -sfL https://raw.githubusercontent.com/dekokun/mackerel-plugin-bitcoin-core/main/install.sh | sh -s -- -b $(go env GOPATH)/bin [vX.Y.Z]
-
-# In alpine linux (as it does not come with curl by default)
-% wget -O - -q https://raw.githubusercontent.com/dekokun/mackerel-plugin-bitcoin-core/main/install.sh | sh -s [vX.Y.Z]
-
 # go get
 % go install github.com/dekokun/mackerel-plugin-bitcoin-core/cmd/mackerel-plugin-bitcoin-core@latest
+
+# mkr plugin install
+% mkr plugin install dekokun/mackerel-plugin-bitcoin-core
 ```
 
 ## Author
