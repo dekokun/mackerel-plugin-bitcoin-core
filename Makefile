@@ -2,10 +2,10 @@ VERSION := 0.0.7
 COMMIT := $(shell git rev-parse --short HEAD)
 LDFLAGS := -ldflags "-w -s -X main.version=${VERSION} -X main.commit=${COMMIT}"
 
-mackerel-plugin-bitcoin-core: mackerel-plugin-bitcoin-core.go Makefile
-	go build $(LDFLAGS) -o mackerel-plugin-bitcoin-core
+mackerel-plugin-bitcoin-core: mackerel-plugin-bitcoin.go Makefile
+	go build $(LDFLAGS) -o mackerel-plugin-bitcoin
 
-linux: mackerel-plugin-bitcoin-core.go
+linux: mackerel-plugin-bitcoin.go
 	GOOS=linux GOARCH=arm64 go build $(LDFLAGS) -o mackerel-plugin-bitcoin-core
 
 fmt:

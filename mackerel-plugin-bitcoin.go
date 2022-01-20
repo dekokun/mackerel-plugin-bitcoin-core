@@ -13,14 +13,14 @@ import (
 	mp "github.com/mackerelio/go-mackerel-plugin"
 )
 
-type BitcoinCorePlugin struct {
+type BitcoinPlugin struct {
 	Prefix   string
 	Dest     string
 	User     string
 	Password string
 }
 
-func (b BitcoinCorePlugin) GraphDefinition() map[string]mp.Graphs {
+func (b BitcoinPlugin) GraphDefinition() map[string]mp.Graphs {
 	labelPrefix := strings.Title(b.MetricKeyPrefix())
 	return map[string]mp.Graphs{
 		"block": {
@@ -49,7 +49,7 @@ func (b BitcoinCorePlugin) GraphDefinition() map[string]mp.Graphs {
 	}
 }
 
-func (b BitcoinCorePlugin) FetchMetrics() (map[string]float64, error) {
+func (b BitcoinPlugin) FetchMetrics() (map[string]float64, error) {
 	connCfg := &rpcclient.ConnConfig{
 		Host:                b.Dest,
 		User:                b.User,
@@ -101,7 +101,7 @@ func (b BitcoinCorePlugin) FetchMetrics() (map[string]float64, error) {
 	return stat, nil
 }
 
-func (b BitcoinCorePlugin) MetricKeyPrefix() string {
+func (b BitcoinPlugin) MetricKeyPrefix() string {
 	if b.Prefix == "" {
 		b.Prefix = "bitcoin"
 	}
@@ -144,7 +144,7 @@ func Run(ctx context.Context, argv []string, outStream, errStream io.Writer) err
 	if *ver {
 		return printVersion(outStream)
 	}
-	b := BitcoinCorePlugin{
+	b := BitcoinPlugin{
 		Prefix:   *optPrefix,
 		Dest:     *optHost + ":" + *optPort,
 		User:     *optUser,
