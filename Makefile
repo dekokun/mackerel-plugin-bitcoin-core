@@ -1,4 +1,4 @@
-VERSION := 0.0.5
+VERSION := 0.0.6
 COMMIT := $(shell git rev-parse --short HEAD)
 LDFLAGS := -ldflags "-w -s -X main.version=${VERSION} -X main.commit=${COMMIT}"
 
