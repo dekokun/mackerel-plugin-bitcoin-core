@@ -1,4 +1,4 @@
-module github.com/dekokun/mackerel-plugin-bitcoin-core
+module github.com/dekokun/mackerel-plugin-bitcoin
 
 go 1.17
 
