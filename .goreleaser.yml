@@ -1,5 +1,5 @@
 builds:
-  - binary: mackerel-plugin-bitcoin-core
+  - binary: mackerel-plugin-bitcoin
     goos:
       - linux
     goarch:
@@ -11,4 +11,4 @@ archives:
 release:
   github:
     owner: dekokun
-    name: mackerel-plugin-bitcoin-core
+    name: mackerel-plugin-bitcoin
