@@ -25,7 +25,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build-and-push-docker-image:
-    needs: [release-binary]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
