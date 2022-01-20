@@ -6,10 +6,10 @@ COPY go.sum go.mod ./
 RUN go mod download
 
 COPY . .
-RUN make
+RUN make build
 
 FROM mackerel/mackerel-container-agent:v0.5.1
 
-COPY --from=plugin-build /go/app/mackerel-plugin-bitcoin-core /usr/local/bin
+COPY --from=plugin-build /go/app/mackerel-plugin-bitcoin /usr/local/bin
 
 ENTRYPOINT ["/usr/local/bin/mackerel-container-agent"]
