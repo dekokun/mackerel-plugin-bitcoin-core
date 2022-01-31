@@ -16,7 +16,7 @@ linux: mackerel-plugin-bitcoin.go
 fmt:
 	go fmt ./...
 
-check:
+test:
 	go test ./...
 
 clean:

@@ -1,0 +1,57 @@
+{
+  "error": null,
+  "id": null,
+  "result": [
+    {
+      "addr": "192.0.2.0:6696",
+      "addr_processed": 0,
+      "addr_rate_limited": 0,
+      "addrbind": "192.0.2.0:8333",
+      "addrlocal": "127.0.0.1:8333",
+      "bip152_hb_from": false,
+      "bip152_hb_to": false,
+      "bytesrecv": 200,
+      "bytesrecv_per_msg": {
+        "pong": 32,
+        "verack": 24,
+        "version": 144
+      },
+      "bytessent": 1412,
+      "bytessent_per_msg": {
+        "addr": 55,
+        "feefilter": 32,
+        "getheaders": 1053,
+        "ping": 32,
+        "sendcmpct": 66,
+        "sendheaders": 24,
+        "verack": 24,
+        "version": 126
+      },
+      "connection_type": "inbound",
+      "conntime": 1,
+      "id": 1,
+      "inbound": true,
+      "inflight": [],
+      "last_block": 0,
+      "last_transaction": 0,
+      "lastrecv": 1,
+      "lastsend": 1,
+      "minfeefilter": 0,
+      "minping": 0.277217,
+      "network": "not_publicly_routable",
+      "permissions": [],
+      "pingtime": 0.1,
+      "relaytxes": false,
+      "services": "0000000000000001",
+      "servicesnames": [
+        "NETWORK"
+      ],
+      "startingheight": 1,
+      "subver": "/test/test/",
+      "synced_blocks": -1,
+      "synced_headers": -1,
+      "timeoffset": 0,
+      "version": 70015
+    }
+  ]
+}
