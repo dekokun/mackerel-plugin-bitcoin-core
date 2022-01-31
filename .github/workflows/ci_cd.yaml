@@ -23,6 +23,7 @@ jobs:
       with:
         verbose: true
         files: coverage.out
+        fail_ci_if_error: true
   test-docker:
     runs-on: ubuntu-latest
     steps:
