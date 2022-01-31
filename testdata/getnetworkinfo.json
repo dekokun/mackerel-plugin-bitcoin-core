@@ -1,0 +1,61 @@
+{
+  "error": null,
+  "id": null,
+  "result": {
+    "connections": 37,
+    "connections_in": 27,
+    "connections_out": 10,
+    "incrementalfee": 0.00001,
+    "localaddresses": [
+      {
+        "address": "203.0.113.0",
+        "port": 8333,
+        "score": 2000
+      }
+    ],
+    "localrelay": true,
+    "localservices": "0000000000000408",
+    "localservicesnames": [
+      "WITNESS",
+      "NETWORK_LIMITED"
+    ],
+    "networkactive": true,
+    "networks": [
+      {
+        "limited": false,
+        "name": "ipv4",
+        "proxy": "",
+        "proxy_randomize_credentials": false,
+        "reachable": true
+      },
+      {
+        "limited": false,
+        "name": "ipv6",
+        "proxy": "",
+        "proxy_randomize_credentials": false,
+        "reachable": true
+      },
+      {
+        "limited": true,
+        "name": "onion",
+        "proxy": "",
+        "proxy_randomize_credentials": false,
+        "reachable": false
+      },
+      {
+        "limited": true,
+        "name": "i2p",
+        "proxy": "",
+        "proxy_randomize_credentials": false,
+        "reachable": false
+      }
+    ],
+    "protocolversion": 70016,
+    "relayfee": 0.00001,
+    "subversion": "/Satoshi:22.0.0/",
+    "timeoffset": 0,
+    "version": 220000,
+    "warnings": ""
+  }
+}
+
