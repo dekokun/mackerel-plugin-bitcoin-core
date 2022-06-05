@@ -78,25 +78,9 @@ func (b BitcoinPlugin) FetchMetrics() (map[string]float64, error) {
 	for _, v := range info.LocalAddresses {
 		stat["network.score."+strings.Replace(v.Address, ".", "_", -1)] = float64(v.Score)
 	}
-	peerInfo, err := client.GetPeerInfo()
-	total := 0
-	in := 0
-	out := 0
-	for _, v := range peerInfo {
-		if v.Inbound {
-			in += 1
-		} else {
-			out += 1
-		}
-		total += 1
-	}
-	stat["in"] = float64(in)
-	stat["out"] = float64(out)
-	stat["total"] = float64(total)
-
-	if err != nil {
-		log.Fatal(err)
-	}
+	stat["in"] = float64(info.ConnectionsIn)
+	stat["out"] = float64(info.ConnectionsOut)
+	stat["total"] = float64(info.Connections)
 
 	return stat, nil
 }

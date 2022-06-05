@@ -61,8 +61,8 @@ func TestFetchMetrics(t *testing.T) {
 
 	t.Log(stat)
 	assert.EqualValues(t, 10, stat["height"])
-	assert.EqualValues(t, 1, stat["in"])
-	assert.EqualValues(t, 0, stat["out"])
-	assert.EqualValues(t, 1, stat["total"])
+	assert.EqualValues(t, 27, stat["in"])
+	assert.EqualValues(t, 10, stat["out"])
+	assert.EqualValues(t, 37, stat["total"])
 	assert.EqualValues(t, 2000, stat["network.score.203_0_113_0"])
 }
