@@ -3,7 +3,7 @@ module github.com/dekokun/mackerel-plugin-bitcoin
 go 1.17
 
 require (
-	github.com/btcsuite/btcd v0.23.0
+	github.com/btcsuite/btcd v0.23.1
 	github.com/mackerelio/go-mackerel-plugin v0.1.2
 	github.com/stretchr/testify v1.7.1
 )
