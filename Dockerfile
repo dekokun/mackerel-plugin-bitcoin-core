@@ -8,7 +8,7 @@ RUN go mod download
 COPY . .
 RUN make build
 
-FROM mackerel/mackerel-container-agent:v0.6.4
+FROM mackerel/mackerel-container-agent:v0.7.0
 
 COPY --from=plugin-build /go/app/mackerel-plugin-bitcoin /usr/local/bin
 
