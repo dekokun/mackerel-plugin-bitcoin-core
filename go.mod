@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/btcsuite/btcd v0.23.1
-	github.com/mackerelio/go-mackerel-plugin v0.1.3
+	github.com/mackerelio/go-mackerel-plugin v0.1.4
 	github.com/stretchr/testify v1.8.0
 )
 
