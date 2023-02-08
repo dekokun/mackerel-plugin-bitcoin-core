@@ -1,6 +1,6 @@
 {
   "extends": [
     "github>hatena/renovate-config",
-    "schedule:daily"
+    "schedule:weekends"
   ]
 }
