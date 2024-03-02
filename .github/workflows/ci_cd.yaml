@@ -27,10 +27,11 @@ jobs:
     - name: test
       run: go test -race -coverprofile coverage.out -covermode atomic ./...
     - name: Send coverage
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
         verbose: true
         files: coverage.out
+        token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
   test-docker:
     runs-on: ubuntu-latest
